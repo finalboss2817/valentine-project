@@ -41,12 +41,12 @@
             50% { transform: translate(-50%, -52%) rotate(1deg); }
         }
         
-        /* 3D Envelope Styles */
         .envelope-wrapper {
             perspective: 1000px;
             width: 100%;
             display: flex;
             justify-content: center;
+            align-items: center;
         }
         .envelope {
             position: relative;
@@ -133,7 +133,6 @@
             transform: translateY(-140px);
         }
 
-        /* Full Screen Letter Mode */
         .letter-fullscreen {
             position: fixed;
             top: 50%;
@@ -197,18 +196,20 @@
             pointer-events: none;
         }
     </style>
-<script type="importmap">
+    <script type="importmap">
 {
   "imports": {
-    "react/": "https://esm.sh/react@^19.2.4/",
-    "react": "https://esm.sh/react@^19.2.4",
+    "react": "https://esm.sh/react@19.0.0",
+    "react-dom": "https://esm.sh/react-dom@19.0.0",
+    "react-dom/client": "https://esm.sh/react-dom@19.0.0/client",
     "react-dom/": "https://esm.sh/react-dom@^19.2.4/",
-    "@google/genai": "https://esm.sh/@google/genai@^1.41.0"
+    "react/": "https://esm.sh/react@^19.2.4/"
   }
 }
 </script>
 </head>
 <body>
     <div id="root"></div>
+    <script type="module" src="index.tsx"></script>
 </body>
 </html>
